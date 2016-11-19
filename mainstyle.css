@@ -1,0 +1,9 @@
+@font-face {
+	font-family: Berlin_Sans_FB_Bold;
+	src: url('Berlin_Sans_FB_Bold.ttf');
+;}
+body {
+	background-image: url("/Assets/BackgroundScene.png");
+	background-color: #0d4a18;		
+  	font-family: Berlin_Sans_FB_Bold;
+}
