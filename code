@@ -1,0 +1,78 @@
+var game = new Phaser.Game(window.innerWidth * window.devicePixelRatio, window.innerHeight * window.devicePixelRatio, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+// var game = new Phaser.Game(1080, 720, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+
+var cursors;
+var text;
+var scaleRatio = window.devicePixelRatio / 3;
+
+function preload() {
+	//loading images with tags
+	game.load.image("tux", "data/Main_Scene.png");
+	game.load.image("sign", "data/sign.png");
+	game.load.image("glass", "data/lemonadeGlass.png");
+	game.load.image("stand", "data/lemonadeStand2.png");
+	game.load.image("okay", "data/okayStand.png");
+	game.load.image("back", "data/backSign.png");
+	game.load.image("jar", "data/lemonadeJar.png");
+	game.load.image("name", "data/lemonadeStandName.png");
+	game.load.image("tree", "data/tree.png");
+	game.load.image("sugar", "data/spoonSugar.png");
+	game.load.image("sale", "data/saleSign.png");
+	game.load.image("sale2", "data/saleSign1.png");
+}
+
+function create() {
+	//white background for canvas because canvas is larger than the image.
+	game.stage.backgroundColor = "#f7f8f9";
+
+	//scenes
+	scenes = game.add.group();
+	createScene(0, 0);
+
+	//obj in game
+	objs = game.add.group();
+	createObj();
+
+	//keyboard input
+	cursors = game.input.keyboard.createCursorKeys();
+
+	text = game.add.text(250, 16, "", {fill: "#ffffff"});
+
+	//listens for input on objs
+	objs.events.onInputDown.add(listener, this);
+}
+
+function update() {
+	sceneUpdate();
+}
+
+//loads the scene and adds it to the array of scenes
+function createScene(x, y){
+	var scene = scenes.create(x, y, "tux");
+
+
+}
+
+//sign and menu items
+function createObj(){
+	var obj = objs.create(game.world.centerX, game.world.centerY, "sign");
+	obj.inputEnabled = true;
+	obj = objs.create(0, 250, "jar");
+}
+
+//update the scene
+function sceneUpdate(){
+	//I want this to update the scene every time an object is clicked in the game.
+	scenes.forEach(function(p){
+
+	});
+
+	//scales all the objects with respect to the dimensions of the canvas
+	objs.forEach(function(p){
+	p.scale.setTo(scaleRatio, scaleRatio);
+	});
+}
+
+function listener(){
+	text.text = "You clicked it!! It works, yay. Abdallah is going on break now.";
+}
