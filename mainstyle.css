@@ -32,3 +32,23 @@ h1{
   color: #230c0;
   font-size: 40px;
 }
+
+.intro {
+  background-image: url("introPage.png");
+  background-color: #32921f;    
+    font-family: Berlin_Sans_FB_Bold;
+    text-align: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    min-height: 100%;
+    min-width: 100%;
+
+    width: 100%;
+    height: auto;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+}
