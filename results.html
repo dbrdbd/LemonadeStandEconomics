@@ -6,28 +6,43 @@
 	<link rel="stylesheet" href="mainstyle.css">
 </head>
 
-<body>
+<body style="overflow-y: scroll;">
 	<h1 class = "text" style = "font-size: 5vw; padding: 0px;">Sales Made</h1>
 	<!-- <br> -->
 
-	<h2 class = "text" style = "font-size: 3vw; "> Total Sales Made </h2>
-	<p class = "text" style = "font-size: 2vw; "> How many cups did you sell? </p>
-	<input type="text" id = "sales"/>
+	<table>
+	<tr>
+	<tbody>
+
+	<td>
+	<h2 class = "text" style = "font-size: 3vw; text-align: left;"> Total Sales Made </h2>
+	<p class = "text" style = "font-size: 2vw; text-align: left;"> How many cups did you sell? </p>
+	<input type="text" id = "sales" style="float: left;" />
 	<a id="nextButton">
 		<!-- <img src="okaySign.png" style=width="114" height="100"> -->
-		<img src="okaySign.png" style = "width: 8vw; height: 8vw;">
+		<img src="okaySign.png" style = "width: 8vw; height: 8vw; float: left;">
 	</a>
-	<br>
-	<h3 class = "text" style = "font-size: 2vw;"> Total Money Made </h3>
+
+	</td>
+
+	<!-- <br> -->
+	<td>
+	<h3 class = "text" style = "font-size: 2vw; text-align: right;"> Total Money Made </h3>
 	<script type="text/javascript">
    	document.write(localStorage.getItem("Prof"));
 	</script>
-	<h3 class = "text" style = "font-size: 2vw;"> Total Sales Made </h3>
+	<h3 class = "text" style = "font-size: 2vw; text-align: right;"> Total Sales Made </h3>
 	<script type="text/javascript">
    	document.write(localStorage.getItem("Rev"));
 	</script>
 
-	<br>
+
+	</td>
+	</tr>
+	</tbody>
+	</table>
+
+	<!-- <br> -->
 	<h2 class = "text" style = "font-size: 3vw;"> What do you want to do with all of this money?</h2>
 	<div id="options" class = "text" style = "font-size: 2vw;">
 		<p>SAVE!</p>
@@ -36,6 +51,7 @@
 		<p>Spend on Toys!</p>
 	</div>
 	<script src="storevar4.js"></script>
+	
 </body> 
 <!--This needs javascript and logic, just the barebones for now-->
 </html>
