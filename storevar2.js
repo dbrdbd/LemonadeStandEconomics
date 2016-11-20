@@ -2,23 +2,25 @@
 
 var inone, intwo, inthree;
 var val = 0;
-var AvePrice;
+var Lprice,Sprice;
 
 
 function assignVars(){
-	inone = document.getElementById("user1").value;
-	intwo = document.getElementById("user2").value;
-	inthree = document.getElementById("user3").value;
+	localStorage.clear();
+	inone = document.getElementById("lemons").value;
+	intwo = document.getElementById("sugars").value;
+	inthree = document.getElementById("glasses").value;
 }
 function store(){
-	localStorage.setItem("user1", inone);
-	localStorage.setItem("user2", intwo);
-	localStorage.setItem("user3", inthree);
+	localStorage.setItem("lemons", inone);
+	localStorage.setItem("sugars", intwo);
+	localStorage.setItem("glasses", inthree);
 }
 function returnstats(){
-	AvePrice=(inone*1.08+intwo*0.02)/inthree;
-	localStorage.setItem("AvePP",AvePrice);
-	console.log(AvePrice);
+	Lprice=inone*1.08;
+	Sprice=intwo*0.02;
+	localStorage.setItem("Lprice",Lprice);
+	localStorage.setItem("Sprice",Sprice);
 }
 function printVars(){
 	console.log("Var one: " + inone  + "/nVar two: " + intwo + "/nVar three: " + inthree);
@@ -32,7 +34,12 @@ function getVars(){
 function main(){
 
 	assignVars();
-	//store();
+	store();
 	printVars();
 	returnstats();
+
+	window.location = 'potentialRev.html';
 }
+
+var nextButton = document.getElementById('nextButton');
+nextButton.addEventListener('click', main);
