@@ -3,6 +3,7 @@
 <head>
 	<title>Let Us Make Money</title>
 	<link rel="stylesheet" href="mainstyle.css">
+	<script src="storevar2.js"></script>
 </head>
 <body>
 
@@ -12,12 +13,22 @@
 		</thead>
 
 		<tbody>
-			<tr><td><img src = "Assets/lemon.png" style = "width: 150px; height: 150px;"></td> <td>How many lemons did you use?</td></tr>
-			<tr><td><img src = "Assets/spoonSugar.png" style = "width: 150px; height: 150px;"></td> <td>How many spoonfuls of sugar did you use?</td></tr>
-			<tr><td><img src = "Assets/lemonadeGlass.png" style = "width: 150px; height: 150px;"></td> <td>How many cups of lemonade did you make?</td></tr>
+			<tr>
+			<td><img src = "lemon.png" style = "width: 150px; height: 150px;"></td> <td>How many lemons did you use?</td>
+			<td><input type="text" id = "user1"/><!--it had a name variable--></td>
+			</tr>
+			<tr><td><img src = "spoonSugar.png" style = "width: 150px; height: 150px;"></td>
+			<td>How many spoonfuls of sugar did you use?</td>
+			<td><input type="text" id = "user2"/></td>
+			</tr>
+			<tr>
+			<td><img src = "lemonadeGlass.png" style = "width: 150px; height: 150px;"></td>
+			<td>How many cups of lemonade did you make?</td>
+			<td><input type="text" id = "user3"/></td>
+			</tr>
 		</tbody>
 
 	</table>
-
+<button id = "bub" type = "button" onclick="main()"><a href="statistics.html">submit</a></button>
 </body>
 </html>

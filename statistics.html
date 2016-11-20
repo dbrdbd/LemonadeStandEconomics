@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Let Us Make Money</title>
+	<link rel="stylesheet" href="mainstyle.css">
+	<script src = "storevar2.js"></script>
+</head>
+<body>
+	<h1>A Few Things Before We Start Selling</h1>
+	<table>
+		<tbody>
+		<br>
+			<tr>
+			<td><img src = "lemon.png" style = "width: 125px; height: 125px;"></td><td>Average cost of Lemons is $1.08/lemon:</td>
+			</tr>
+			<tr><td><img src = "spoonSugar.png" style = "width: 125px; height: 125px;"></td> <td>Average cost of a spoonful of sugar is $.02/spoonful<span id="cupsSold"></span></td></tr>
+			<tr>
+			<td><img src = "lemonadeGlass.png" style = "width: 125px; height: 125px;"></td> <td>Average Cost per Lemonade Cup</td>
+			<td>
+			<script type="text/javascript">
+   			 document.write(localStorage.getItem("AvePP"));
+			 </script>
+			 </td>
+			</tr>
+		</tbody>
+	</table>
+<div id = "footer">
+<a href="potentialRev.html"><img src="nextSign.png" width="114" height="100"onClick="DoSomething();" /></a>
+</div>
+	<script type="text/javascript">
+		
+		var cupsSpan = document.getElementById('cupsSold');
+			cupsSpan.innerText = localStorage.getItem('AvePP')
+
+	</script>
+
+</body>
+</html>
