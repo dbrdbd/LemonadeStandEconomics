@@ -4,37 +4,36 @@
 	<meta charset = "utf-8">
 	<title>Potential Revenue</title>
 	<link rel="stylesheet" href="mainstyle.css">
-	<script src = "storevar2.js"></script>
+
 
 </head>
 
 <body>
 	<h1>A Few Things Before We Start Selling</h1>
-	<br>
 
 	<h2> Total Cost of Lemons </h2>
-	<p> Average cost of Lemons is $1.08/lemon.<br> Therefore the total cost of lemons is $1.08 * number of lemons </p>
-
-	<br>
-	<h2> Total Cost of Sugar </h2>
-	<p> Average cost of a spoonful of sugar is $.02/spoonful. <br>Therefore the total cost of sugar is $.02 * number of spoonfuls of sugar = $5. </p>
-
-	<br>
-	<h2> How much will each cup of lemonade cost? </h2>
-
-
-	<br>
-	<h1> Total Cost of Lemonade Stand is $25 </h1>
-	<h1> Most Amount of Money to be Made is $5 </h1>
-
-	<hr>
-	<a href="sellLemonade.html">
-		<img src="okaySign.png" width="114" height="100"/>
-	</a>
+	<p> Average cost of Lemons is $1.08/lemon.<br> Therefore the total cost of lemons is $1.08 * 
 	<script type="text/javascript">
-		var cupsSpan = document.getElementsById('cupsSold');
-			cupsSpan.innerText = localStorage.getItem('AvePP')
-	</script>
+   	document.write(localStorage.getItem("lemons"));
+	</script> number of lemons =
+	<script type="text/javascript">
+   	document.write(localStorage.getItem("Lprice"));
+	</script>$</p>
+
+	<h2> Total Cost of Sugar </h2>
+	<p> Average cost of a spoonful of sugar is $.02/spoonful. <br>Therefore the total cost of sugar is $.02 *
+	<script type="text/javascript">
+   	document.write(localStorage.getItem("sugars"));
+	</script> number of spoonfuls of sugar = 
+	<script type="text/javascript">
+   	document.write(localStorage.getItem("Sprice"));
+	</script>$</p>
+	<h2> How much will you sell each cup of lemonade? </h2>
+	<p><input type="text" id = "lemonsP"/><!--it had a name variable--></p>
+	<a id="nextButton">
+		<img src="nextSign.png" style=width="114" height="100">
+	</a>
+	<script src = "storevar3.js"></script>
 </body> 
 <!--This needs javascript and logic, just the barebones for now-->
 </html>

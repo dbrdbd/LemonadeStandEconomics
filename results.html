@@ -12,10 +12,19 @@
 
 	<h2> Total Sales Made </h2>
 	<p> How many cups did you sell? </p>
-
+	<input type="text" id = "sales"/>
+	<a id="nextButton">
+		<img src="okaySign.png" style=width="114" height="100">
+	</a>
 	<br>
 	<h3> Total Money Made </h3>
+	<script type="text/javascript">
+   	document.write(localStorage.getItem("Prof"));
+	</script>
 	<h3> Total Sales Made </h3>
+	<script type="text/javascript">
+   	document.write(localStorage.getItem("Rev"));
+	</script>
 
 	<br>
 	<h2> What do you want to do with all of this money?</h2>
@@ -25,7 +34,7 @@
 		<p>SHARE!</p>
 		<p>Spend on Toys!</p>
 	</div>
-	
+	<script src="storevar4.js"></script>
 </body> 
 <!--This needs javascript and logic, just the barebones for now-->
 </html>
