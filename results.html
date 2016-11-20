@@ -7,28 +7,29 @@
 </head>
 
 <body>
-	<h1>Sales Made</h1>
-	<br>
+	<h1 class = "text" style = "font-size: 5vw; padding: 0px;">Sales Made</h1>
+	<!-- <br> -->
 
-	<h2> Total Sales Made </h2>
-	<p> How many cups did you sell? </p>
+	<h2 class = "text" style = "font-size: 3vw; "> Total Sales Made </h2>
+	<p class = "text" style = "font-size: 2vw; "> How many cups did you sell? </p>
 	<input type="text" id = "sales"/>
 	<a id="nextButton">
-		<img src="okaySign.png" style=width="114" height="100">
+		<!-- <img src="okaySign.png" style=width="114" height="100"> -->
+		<img src="okaySign.png" style = "width: 8vw; height: 8vw;">
 	</a>
 	<br>
-	<h3> Total Money Made </h3>
+	<h3 class = "text" style = "font-size: 2vw;"> Total Money Made </h3>
 	<script type="text/javascript">
    	document.write(localStorage.getItem("Prof"));
 	</script>
-	<h3> Total Sales Made </h3>
+	<h3 class = "text" style = "font-size: 2vw;"> Total Sales Made </h3>
 	<script type="text/javascript">
    	document.write(localStorage.getItem("Rev"));
 	</script>
 
 	<br>
-	<h2> What do you want to do with all of this money?</h2>
-	<div id="options">
+	<h2 class = "text" style = "font-size: 3vw;"> What do you want to do with all of this money?</h2>
+	<div id="options" class = "text" style = "font-size: 2vw;">
 		<p>SAVE!</p>
 		<p>More Lemonade!</p>
 		<p>SHARE!</p>
