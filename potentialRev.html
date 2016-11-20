@@ -4,14 +4,25 @@
 	<meta charset = "utf-8">
 	<title>Potential Revenue</title>
 	<link rel="stylesheet" href="mainstyle.css">
+	<script src = "storevar.js"></script>
+
 </head>
 
-<body>
+<body onload="main()">
+	<script type="text/javascript">
+		var arr = getVars();
+		var arr0 = arr[0];
+		var arr1 = arr[1];
+		var arr2 = arr[2];
+	</script>
+
 	<h1>A Few Things Before We Start Selling</h1>
 	<br>
 
 	<h2> Total Cost of Lemons </h2>
-	<p> Average cost of Lemons is $1.08/lemon.<br> Therefore the total cost of lemons is $1.08 * number of lemons = $20 </p>
+	<p> Average cost of Lemons is $1.08/lemon.<br> Therefore the total cost of lemons is $1.08 * number of lemons </p>
+	<script type="text/javascript"> arr0.innerHTML </script>
+	
 
 	<br>
 	<h2> Total Cost of Sugar </h2>
