@@ -32,8 +32,8 @@ h1{
 }
 
 .intro {
-  background-image: url("introPage.png");
-  background-color: #32921f;    
+  background-image: url("introPage.png") !important;
+  background-color: #32921f;
     font-family: Berlin_Sans_FB_Bold;
     text-align: center;
 
@@ -49,4 +49,5 @@ h1{
 
     background-repeat: no-repeat;
     background-size: cover;
+
 }
