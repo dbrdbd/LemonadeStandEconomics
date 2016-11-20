@@ -20,12 +20,13 @@ body {
 
   	background-repeat: no-repeat;
   	background-size: cover;
+
+
+    color: #f2f2d1;
 }
 
 .text{
   color: #f2f2d1;
-  /*font-size: 40px;*/
-  /*text-align: left;*/
 }
 
 h1{
